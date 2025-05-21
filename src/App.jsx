@@ -150,7 +150,7 @@ export default function LibraryLandingPage() {
                             <input
                               type="text"
                               placeholder="John Doe"
-                              className="w-full pl-10 pr-4 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                              className="w-full pl-10 pr-4 py-2 text-sm border border-indigo-400 bg-indigo-50 text-indigo-900 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 placeholder-indigo-400"
                               value={name}
                               onChange={(e) => setName(e.target.value)}
                             />
@@ -169,7 +169,7 @@ export default function LibraryLandingPage() {
                           <input
                             type="email"
                             placeholder="your@email.com"
-                            className="w-full pl-10 pr-4 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                            className="w-full pl-10 pr-4 py-2 text-sm border border-indigo-400 bg-indigo-50 text-indigo-900 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 placeholder-indigo-400"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                           />
@@ -187,7 +187,7 @@ export default function LibraryLandingPage() {
                           <input
                             type="password"
                             placeholder="••••••••"
-                            className="w-full pl-10 pr-4 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                            className="w-full pl-10 pr-4 py-2 text-sm border border-indigo-400 bg-indigo-50 text-indigo-900 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 placeholder-indigo-400"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                           />
@@ -239,14 +239,44 @@ export default function LibraryLandingPage() {
                       <div className="grid grid-cols-2 gap-3 mt-3">
                         <button
                           type="button"
-                          className="py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-xs font-medium text-gray-700 hover:bg-gray-50"
+                          className="py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-xs font-medium text-gray-700 hover:bg-gray-50 flex items-center justify-center gap-2"
                         >
+                          {/* Google SVG */}
+                          <svg width="18" height="18" viewBox="0 0 48 48">
+                            <g>
+                              <path
+                                fill="#4285F4"
+                                d="M44.5 20H24v8.5h11.7C34.7 33.7 29.8 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 6 .9 8.3 2.7l6.2-6.2C34.2 4.5 29.3 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21c10.5 0 20-7.7 20-21 0-1.3-.1-2.7-.5-4z"
+                              />
+                              <path
+                                fill="#34A853"
+                                d="M6.3 14.7l7 5.1C15.5 16.1 19.4 13 24 13c3.1 0 6 .9 8.3 2.7l6.2-6.2C34.2 4.5 29.3 3 24 3c-7.2 0-13 5.8-13 13 0 2.2.6 4.3 1.3 6.2z"
+                              />
+                              <path
+                                fill="#FBBC05"
+                                d="M24 44c5.8 0 10.7-3.3 13.7-8.1l-7-5.1C29.5 39.9 25.6 43 21 43c-3.1 0-6-.9-8.3-2.7l-6.2 6.2C13.8 43.5 18.7 45 24 45z"
+                              />
+                              <path
+                                fill="#EA4335"
+                                d="M44.5 20H24v8.5h11.7C34.7 33.7 29.8 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 6 .9 8.3 2.7l6.2-6.2C34.2 4.5 29.3 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21c10.5 0 20-7.7 20-21 0-1.3-.1-2.7-.5-4z"
+                              />
+                            </g>
+                          </svg>
                           Google
                         </button>
                         <button
                           type="button"
-                          className="py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-xs font-medium text-gray-700 hover:bg-gray-50"
+                          className="py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-xs font-medium text-gray-700 hover:bg-gray-50 flex items-center justify-center gap-2"
                         >
+                          {/* Facebook SVG */}
+                          <svg
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="#1877F3"
+                          >
+                            <path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0" />
+                          </svg>
                           Facebook
                         </button>
                       </div>
@@ -338,7 +368,7 @@ export default function LibraryLandingPage() {
       {/* Featured Books Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-gray-800">
+          <h2 className="text-3xl font-bold mb-8 text-gray-800 text-center">
             Featured Books
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -373,7 +403,7 @@ export default function LibraryLandingPage() {
       {/* Categories Section */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-gray-800">
+          <h2 className="text-3xl font-bold mb-8 text-gray-800 text-center">
             Browse by Category
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Search,
   Book,
@@ -25,6 +25,15 @@ export default function LibraryLandingPage() {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showGoTop, setShowGoTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowGoTop(window.scrollY > 300);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const featuredBooks = [
     {
@@ -572,6 +581,28 @@ export default function LibraryLandingPage() {
           </div>
         </div>
       </footer>
+
+      {/* Go to Top Button */}
+      {showGoTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="fixed bottom-6 right-6 z-50 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 transition"
+          aria-label="Go to top"
+        >
+          <svg
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            viewBox="0 0 24 24"
+          >
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </button>
+      )}
 
       {/* Close dropdown when clicking outside */}
       {showAuthDropdown && (
